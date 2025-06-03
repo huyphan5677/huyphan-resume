@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Minh Huy - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.4;
+            color: #000;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            font-size: 11pt;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+        }
+
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 14pt;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .contact-line {
+            font-size: 10pt;
+            margin-bottom: 3px;
+        }
+
+        .section {
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-bottom: 8px;
+            padding-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .company-position {
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .duration-location {
+            font-size: 10pt;
+            font-style: italic;
+        }
+
+        .achievements {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+
+        .achievements li {
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+
+        .sub-achievements {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+
+        .sub-achievements li {
+            margin-bottom: 2px;
+            font-size: 10pt;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .degree-institution {
+            font-weight: bold;
+        }
+
+        .education-duration {
+            font-style: italic;
+            font-size: 10pt;
+        }
+
+        .skills-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
+        .skill-category-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 11pt;
+        }
+
+        .skill-list {
+            line-height: 1.3;
+        }
+
+        .languages-section {
+            margin-top: 10px;
+        }
+
+        .language-item {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
+
+        .export-controls {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .export-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .export-btn:hover {
+            background: #0056b3;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+                font-size: 11pt;
+            }
+            
+            .export-controls {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .experience-item {
+                page-break-inside: avoid;
+            }
+        }
+
+        @page {
+            margin: 0.5in;
+            size: letter;
+        }
+    </style>
+</head>
+<body>
+    <!-- Export Controls (hidden when printing) -->
+    <div class="export-controls">
+        <button class="export-btn" onclick="window.print()">📄 Export to PDF</button>
+        <button class="export-btn" onclick="window.location.href='index.html'">🌐 Web View</button>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="name" id="name">Loading...</div>
+        <div class="title" id="title">Loading...</div>
+        <div class="contact-line" id="contact-line1">Loading...</div>
+        <div class="contact-line" id="contact-line2">Loading...</div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <div id="bio" style="text-align: justify;">
+            Loading...
+        </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+        <div id="experience-list">
+            <!-- Experience items will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div id="education-list">
+            <!-- Education items will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+        <div class="section-title">Core Competencies</div>
+        <div class="skills-section" id="skills-section">
+            <!-- Skills will be loaded here -->
+        </div>
+        
+        <!-- Languages -->
+        <div class="languages-section">
+            <div class="skill-category-title">Languages</div>
+            <div id="languages-list">
+                <!-- Languages will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Config -->
+    <script src="config.js"></script>
+
+    <script>
+        function loadResumeData() {
+            const config = window.portfolioConfig;
+            
+            // Load personal information
+            document.getElementById('name').textContent = config.personal.name;
+            document.getElementById('title').textContent = config.personal.title;
+            document.getElementById('bio').textContent = config.personal.bio;
+            
+            // Load contact information (formatted for resume)
+            document.getElementById('contact-line1').innerHTML = 
+                `${config.personal.email} • ${config.personal.phone} • ${config.personal.location}`;
+            
+            let contactLine2 = '';
+            if (config.personal.linkedin) {
+                contactLine2 += config.personal.linkedin;
+            }
+            if (config.personal.github) {
+                contactLine2 += (contactLine2 ? ' • ' : '') + config.personal.github;
+            }
+            if (config.personal.website) {
+                contactLine2 += (contactLine2 ? ' • ' : '') + config.personal.website;
+            }
+            document.getElementById('contact-line2').innerHTML = contactLine2;
+            
+            // Load experience
+            const experienceList = document.getElementById('experience-list');
+            experienceList.innerHTML = config.experience.map(exp => `
+                <div class="experience-item">
+                    <div class="job-header">
+                        <span class="company-position">${exp.company} - ${exp.position}</span>
+                        <span class="duration-location">${exp.duration}</span>
+                    </div>
+                    <ul class="achievements">
+                        ${exp.achievements.map(achievement => {
+                            if (typeof achievement === 'object' && achievement.main) {
+                                return `
+                                    <li>
+                                        ${achievement.main}
+                                        <ul class="sub-achievements">
+                                            ${achievement.sub.map(sub => `<li>${sub}</li>`).join('')}
+                                        </ul>
+                                    </li>
+                                `;
+                            } else {
+                                return `<li>${achievement}</li>`;
+                            }
+                        }).join('')}
+                    </ul>
+                </div>
+            `).join('');
+            
+            // Load education
+            const educationList = document.getElementById('education-list');
+            educationList.innerHTML = config.education.map(edu => `
+                <div class="education-item">
+                    <div class="degree-institution">
+                        <strong>${edu.degree}</strong>, ${edu.institution}
+                    </div>
+                    <div class="education-duration">${edu.duration}</div>
+                </div>
+            `).join('');
+            
+            // Load skills
+            const skillsSection = document.getElementById('skills-section');
+            skillsSection.innerHTML = Object.entries(config.skills).map(([category, skills]) => `
+                <div class="skill-category">
+                    <div class="skill-category-title">${category.charAt(0).toUpperCase() + category.slice(1)} Skills</div>
+                    <div class="skill-list">${skills.join(' • ')}</div>
+                </div>
+            `).join('');
+            
+            // Load languages
+            const languagesList = document.getElementById('languages-list');
+            languagesList.innerHTML = config.languages.map(lang => 
+                `<span class="language-item"><strong>${lang.name}:</strong> ${lang.level}</span>`
+            ).join('');
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', loadResumeData);
+
+        // Auto-focus print dialog on Ctrl+P
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
