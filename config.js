@@ -12,7 +12,7 @@ const portfolioConfig = {
     website: "",
     linkedin: "https://www.linkedin.com/in/huy-phan-270014111/",
     github: "",
-    bio: "Senior Data Scientist with over 5 years of experience delivering end-to-end data science solutions across the insurance, telecommunications, and retail sectors. Experienced in leading projects from problem definition through to production deployment, with a strong focus on aligning analytical outcomes with business strategy. Combines deep statistical expertise with a practical, results-driven approach to uncover insights and drive impactful decisions."
+    bio: "Senior Data Scientist with 7 years of experience delivering end-to-end data science solutions across the insurance, telecommunications, and retail sectors. Experienced in leading projects from problem definition through to production deployment, with a strong focus on aligning analytical outcomes with business strategy. Combines deep statistical expertise with a practical, results-driven approach to uncover insights and drive impactful decisions."
   },
 
   skills: {
