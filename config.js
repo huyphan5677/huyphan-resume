@@ -1,7 +1,3 @@
-// Portfolio Configuration Data
-// This file contains the same data as config.yaml but in JavaScript format
-// This allows the website to work without needing a web server
-
 const portfolioConfig = {
   personal: {
     name: "Phan Minh Huy",
@@ -21,15 +17,14 @@ const portfolioConfig = {
       "Spark",
       "SQL",
       "ML/DL",
-      "Airflow",
-      "Docker",
+      "MLOps",
       "Optimization"
     ],
     soft: [
-      "Problem Solving",
-      "Team Collaboration",
-      "Project Management",
-      "Communication"
+      "Data Strategy",
+      "Stakeholder Management",
+      "Agile/Scrum Management",
+      "Cross-functional Collaboration",
     ]
   },
 
@@ -40,14 +35,19 @@ const portfolioConfig = {
       duration: "Aug 2024 – Present",
       location: "Ha Noi, Vietnam",
       achievements: [
-        "Lead a cross-functional data team (Analysts, Engineers, Scientists) to deliver analytics and solutions aligned with business strategy",
-        "Serve as the primary technical point of contact for external partners: From problem scoping to solution delivery",
+        "Led a cross-functional data team (Analysts, Engineers, Scientists) using Agile methodologies to deliver ML solutions aligned with business goals",
+        "Established the team's OKRs, ensuring alignment between technical roadmaps and company strategic objectives",
+        "Mentored juniors on best practices, fostering skill growth and enhancing team velocity through structured knowledge sharing",
+        "Served as primary technical point of contact for external partners, including problem scoping, solution design, presenting and reporting to partner BOD",
+        "Implemented MLOps practices: Collaborated with DevOps for server infrastructure and setup environments for model deployment, monitoring, and maintenance",
         {
           main: "Delivered projects:",
           sub: [
-            "Credit scoring model (Gini: 55%), boosting client’s internal score performance by 7x%",
+            "VNPT Project: Built a Telco-based Credit score for thin-file customers (Gini 55%), delivering a >70% performance uplift when combined with the partner's internal model",
+            "Unitel Laos market: Developed models for unbanked segments using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
             "Propensity score (Gini: 70%) to enhance campaign targeting",
-            "Location verification score to enhance operational accuracy"
+            "Location verification score to enhance partner operational accuracy",
+            "Logistic regression optimization for a financial institution: Achieved 30-40% Gini uplift over existing models",
           ]
         },
         {
@@ -59,7 +59,6 @@ const portfolioConfig = {
             "CI/CD pipeline: designed and implemented a workflow for automated deployment and version control"
           ]
         },
-        "Mentor and develop team members by fostering skill growth, promoting best practices, and supporting continuous learning within the team"
       ]
     },
     {
