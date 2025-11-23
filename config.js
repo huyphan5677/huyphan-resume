@@ -35,7 +35,7 @@ const portfolioConfig = {
       duration: "Aug 2024 – Present",
       location: "Ha Noi, Vietnam",
       achievements: [
-        "Led a cross-functional data team (Analysts, Engineers, Scientists) using Agile methodologies to deliver ML solutions aligned with business goals",
+        "Led a data team (Analysts, Engineers, Scientists) using Agile methodologies to deliver ML solutions aligned with business goals",
         "Established the team's OKRs, ensuring alignment between technical roadmaps and company strategic objectives",
         "Mentored juniors on best practices, fostering skill growth and enhancing team velocity through structured knowledge sharing",
         "Served as primary technical point of contact for external partners, including problem scoping, solution design, presenting and reporting to partner BOD",
