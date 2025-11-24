@@ -110,6 +110,12 @@ const portfolioConfig = {
 
   education: [
     {
+        institution: "Hanoi University of Science and Technology",
+        degree: "Generative AI Engineer Program",
+        duration: "2025 – Present",
+        location: "Ha Noi, Vietnam",
+    },
+    {
       institution: "Ho Chi Minh University of Science",
       degree: "Master of Data Science",
       duration: "Completed 2025",
