@@ -43,11 +43,12 @@ const portfolioConfig = {
         {
           main: "Delivered projects:",
           sub: [
-            "VNPT Project: Built Telco-based Credit Score models for thin-file customers (Gini 55%), delivering a >70% performance uplift when combined with the partner's internal model",
-            "Unitel Laos market: Developed Credit Score model for unbanked segments using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
+            "Built Telco-based Credit Score models for thin-file customers (Gini 55%), delivering a >70% performance uplift when combined with the partner's internal model",
             "Propensity score (Gini: 70%) to enhance campaign targeting",
             "Location verification score to enhance partner operational accuracy",
             "Logistic regression optimization for a financial institution: Achieved 30-40% Gini uplift over existing models",
+            "Laos market: Developed Credit Score model for unbanked segments using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
+
           ]
         },
         {
