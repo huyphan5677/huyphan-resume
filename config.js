@@ -51,7 +51,7 @@ const portfolioConfig = {
           ]
         },
         {
-          main: "Designed and implemented a ML platform",
+          main: "Designed and implemented a ML platform:",
           sub: [
             "Data stack: Data pipelines, feature store, data quality controls",
             "Model stack: training pipeline with reproducibility and automation",
@@ -60,7 +60,7 @@ const portfolioConfig = {
           ]
         },
         {
-          main: "Tools/Technologies",
+          main: "Tools/Technologies:",
           sub: [
             "Spark (distributed processing), Airflow (orchestration), MLflow (experiment & registry), Great Expectations (data quality), DataHub (metadata & lineage), FastAPI (batch prediction access), Grafana (monitoring), Git-based CI/CD"
           ]
