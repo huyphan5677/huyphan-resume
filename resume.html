@@ -177,26 +177,131 @@
 
         @media print {
             body {
-                padding: 0;
+                padding: 0.3in 0.5in;
                 margin: 0;
-                font-size: 11pt;
+                font-size: 10pt;
+                line-height: 1.35;
+                max-width: 100%;
             }
             
             .export-controls {
                 display: none;
             }
             
-            .section {
-                page-break-inside: avoid;
+            /* Compact header */
+            .header {
+                margin-bottom: 12px;
+                padding-bottom: 10px;
+                page-break-after: avoid;
+                break-after: avoid;
             }
             
+            .name {
+                font-size: 22pt;
+                margin-bottom: 4px;
+            }
+            
+            .title {
+                font-size: 12pt;
+                margin-bottom: 6px;
+            }
+            
+            .contact-line {
+                font-size: 9pt;
+                margin-bottom: 2px;
+            }
+            
+            /* Compact sections */
+            .section {
+                margin-bottom: 12px;
+                page-break-inside: auto;
+            }
+            
+            .section-title {
+                font-size: 12pt;
+                margin-bottom: 6px;
+                padding-bottom: 1px;
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            
+            /* Compact experience items */
             .experience-item {
+                margin-bottom: 10px;
                 page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .company-position {
+                font-size: 11pt;
+            }
+            
+            .duration-location {
+                font-size: 9pt;
+            }
+            
+            .job-header {
+                margin-bottom: 2px;
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            
+            .achievements {
+                margin-left: 15px;
+                margin-top: 3px;
+            }
+            
+            .achievements li {
+                margin-bottom: 1px;
+                font-size: 10pt;
+                line-height: 1.3;
+            }
+            
+            .sub-achievements {
+                margin-left: 15px;
+                margin-top: 2px;
+            }
+            
+            .sub-achievements li {
+                margin-bottom: 1px;
+                font-size: 9pt;
+            }
+            
+            /* Compact education */
+            .education-item {
+                margin-bottom: 8px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            /* Compact skills */
+            .skill-category {
+                margin-bottom: 8px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .skill-category-title {
+                font-size: 10pt;
+                margin-bottom: 3px;
+            }
+            
+            .skill-list {
+                font-size: 10pt;
+                line-height: 1.25;
+            }
+            
+            .languages-section {
+                margin-top: 8px;
+            }
+            
+            .language-item {
+                font-size: 10pt;
             }
         }
 
         @page {
-            margin: 0.5in;
+            margin: 0.4in 0.5in;
             size: letter;
         }
     </style>
