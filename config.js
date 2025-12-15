@@ -1,7 +1,7 @@
 const portfolioConfig = {
   personal: {
     name: "Phan Minh Huy",
-    title: "Data Scientist",
+    title: "AI Product Lead (Applied ML & MLOps)",
     email: "huyphan5677@gmail.com",
     phone: "0356 046 970",
     location: "Ha Noi, Vietnam",
