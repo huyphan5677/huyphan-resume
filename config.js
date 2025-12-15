@@ -8,7 +8,7 @@ const portfolioConfig = {
     website: "",
     linkedin: "https://www.linkedin.com/in/huy-phan-270014111/",
     github: "",
-    bio: "Senior Data Scientist with 7 years of experience delivering end-to-end data science solutions across the insurance, telecommunications, and retail sectors. Experienced in leading projects from problem definition through to production deployment, with a strong focus on aligning analytical outcomes with business strategy. Combines deep statistical expertise with a practical, results-driven approach to uncover insights and drive impactful decisions."
+    bio: "AI Solution Lead with 7+ years of experience bridging the gap between business strategy and technical execution in Retail, Telco, and Finance. Proven track record in defining AI product roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management and driving user adoption for data-driven products."
   },
 
   skills: {
@@ -35,7 +35,7 @@ const portfolioConfig = {
       duration: "Aug 2024 – Present",
       location: "Ha Noi, Vietnam",
       achievements: [
-        "Led a data team (Analysts, Engineers, Scientists) using Agile methodologies to deliver ML solutions aligned with business goals",
+        "Led a team of 3 members (Analysts, Engineers, Scientists) using Agile methodologies to deliver ML solutions aligned with business goals",
         "Established the team's OKRs, ensuring alignment between technical roadmaps and company strategic objectives",
         "Mentored juniors on best practices, fostering skill growth and enhancing team velocity through structured knowledge sharing",
         "Served as primary technical point of contact for external partners, including problem scoping, solution design, presenting and reporting to partner BOD",
@@ -47,8 +47,7 @@ const portfolioConfig = {
             "Propensity score (Gini: 70%) to enhance campaign targeting",
             "Location verification score to enhance partner operational accuracy",
             "Logistic regression optimization for a financial institution: Achieved 30-40% Gini uplift over existing models",
-            "Laos market: Developed Credit Score model for unbanked segments using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
-
+            "Laos market: Developed Credit Score model for unbanked segments using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap"
           ]
         },
         {
@@ -58,6 +57,12 @@ const portfolioConfig = {
             "Model stack: training pipeline with reproducibility and automation",
             "Deployment stack: scheduling, model monitoring, and alerts",
             "CI/CD pipeline: designed and implemented a workflow for automated deployment and version control"
+          ]
+        },
+        {
+          main: "Tools/Technologies",
+          sub: [
+            "Spark (distributed processing), Airflow (orchestration), MLflow (experiment & registry), Great Expectations (data quality), DataHub (metadata & lineage), FastAPI (batch prediction access), Grafana (monitoring), Git-based CI/CD"
           ]
         },
       ]
@@ -132,7 +137,6 @@ const portfolioConfig = {
   languages: [
     {
       name: "English",
-      level: "TOEIC 665"
     },
   ]
 };
