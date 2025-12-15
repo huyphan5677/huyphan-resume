@@ -8,7 +8,7 @@ const portfolioConfig = {
     website: "",
     linkedin: "https://www.linkedin.com/in/huy-phan-270014111/",
     github: "",
-    bio: "AI Solution Lead with 7+ years of experience bridging the gap between business strategy and technical execution in Retail, Telco, and Finance. Proven track record in defining AI product roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management and driving user adoption for data-driven products."
+    bio: "AI Product Lead with 7+ years of experience bridging the gap between business strategy and technical execution in Retail, Telco, and Finance. Proven track record in defining AI product roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management and driving user adoption for data-driven products."
   },
 
   skills: {
