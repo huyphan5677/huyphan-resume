@@ -1,14 +1,14 @@
 const portfolioConfig = {
   personal: {
     name: "Phan Minh Huy",
-    title: "AI Product Lead (Applied ML & MLOps)",
+    title: "Data Science Lead",
     email: "huyphan5677@gmail.com",
     phone: "0356 046 970",
     location: "Ha Noi, Vietnam",
     website: "",
     linkedin: "https://www.linkedin.com/in/huy-phan-270014111/",
     github: "",
-    bio: "AI Product Lead with 7+ years of experience bridging the gap between business strategy and technical execution in Retail, Telco, and Finance. Proven track record in defining AI product roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management and driving user adoption for data-driven products."
+    bio: "Data Science with 7+ years of experience bridging the gap between business strategy and technical execution in Retail, Telco, and Finance. Proven track record in defining Data products roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management and driving user adoption for data-driven products."
   },
 
   skills: {
