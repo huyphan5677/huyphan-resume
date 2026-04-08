@@ -8,7 +8,7 @@ const portfolioConfig = {
     website: "",
     linkedin: "https://www.linkedin.com/in/huy-phan-270014111/",
     github: "",
-    bio: "Data Science with 7+ years of experience bridging the gap between business strategy and technical execution in Retail, Telco, and Finance. Proven track record in defining Data products roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management and driving user adoption for data-driven products."
+    bio: "Data Science Lead with 7+ years of experience bridging business strategy and technical execution across Retail, Telco, and Finance. Proven track record in defining data and AI product roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management, driving adoption of data products, and building practical AI applications including agentic assistants and workflow automation."
   },
 
   skills: {
@@ -18,7 +18,8 @@ const portfolioConfig = {
       "SQL",
       "ML/DL",
       "MLOps",
-      "Optimization"
+      "LangGraph/LangChain",
+      "LLM Applications",
     ],
     soft: [
       "Data Strategy",
@@ -47,7 +48,8 @@ const portfolioConfig = {
             "Propensity score (Gini: 70%) to enhance campaign targeting",
             "Location verification score to enhance partner operational accuracy",
             "Logistic regression optimization for a financial institution: Achieved 30-40% Gini uplift over existing models",
-            "Laos market: Developed Credit Score model for unbanked segments by combining e‑wallet and telco data using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap"
+            "Laos market: Developed Credit Score model for unbanked segments by combining e‑wallet and telco data using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
+            "Built Nutri, a multi-agent AI nutrition assistant with tool orchestration for profile management, calorie-needs estimation, personalized meal-plan generation, and grocery/inventory workflows"
           ]
         },
         {
