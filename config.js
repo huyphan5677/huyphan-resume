@@ -49,7 +49,8 @@ const portfolioConfig = {
             "Location verification score to enhance partner operational accuracy",
             "Logistic regression optimization for a financial institution: Achieved 30-40% Gini uplift over existing models",
             "Laos market: Developed Credit Score model for unbanked segments by combining e‑wallet and telco data using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
-            "Built Nutri, a multi-agent AI nutrition assistant with tool orchestration for profile management, calorie-needs estimation, personalized meal-plan generation, and grocery/inventory workflows"
+            "Built Nutri, a multi-agent AI nutrition assistant with tool orchestration for profile management, calorie-needs estimation, personalized meal-plan generation, and grocery/inventory workflows",
+            "Merchant lending LeadGen for a logistics partner: collaborated with FI to define merchant eligibility criteria and delivered rule-based filtering pipeline for in-app loan invitation targeting"
           ]
         },
         {
@@ -108,10 +109,12 @@ const portfolioConfig = {
       duration: "Oct 2018 – Jul 2020",
       location: "Ho Chi Minh City, Vietnam",
       achievements: [
-        "Built demand and price forecasting models for fertilizer products globally and domestically",
+        "Built demand and price forecasting models for fertilizer products globally and domestically, achieving MAPE < 1%",
+        "Built end-to-end ML pipelines in Alteryx — from data processing to AutoML with Champion-Challenger model selection — for sales forecasting (DFS Group)",
         "Solved Market Basket Analysis and Store Clustering challenges for retail clients",
-        "Developed automated ML pipelines in Alteryx for forecasting and sales prediction (DFS Group)",
-      ]
+        "Collaborated with BI Developers to build dashboards and data storytelling from ML outputs",
+        "Teaching assistant and curriculum designer for specialized consultant training courses"
+    ]
     }
   ],
 
