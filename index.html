@@ -545,14 +545,19 @@
                     </div>
                 </div>
             `).join('');
-              // Load languages
-            const languagesContainer = document.getElementById('languages-list');
-            languagesContainer.innerHTML = config.languages.map(lang => `
-                <div class="language-item">
-                    <div class="language-name">${lang.name}</div>
-                    <div class="language-level">${lang.level}</div>
-                </div>
-            `).join('');
+              // Load languages (section is hidden entirely when none are listed)
+            const languages = config.languages || [];
+            const languagesSection = document.getElementById('languages-section');
+            if (languages.length === 0) {
+                languagesSection.style.display = 'none';
+            } else {
+                document.getElementById('languages-list').innerHTML = languages.map(lang => `
+                    <div class="language-item">
+                        <div class="language-name">${lang.name}</div>
+                        ${lang.level ? `<div class="language-level">${lang.level}</div>` : ''}
+                    </div>
+                `).join('');
+            }
         }
     </script>
 </body>
