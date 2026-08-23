@@ -8,7 +8,7 @@ const portfolioConfig = {
     website: "",
     linkedin: "https://www.linkedin.com/in/huy-phan-270014111/",
     github: "",
-    bio: "Data Science Lead with 8 years of experience bridging business strategy and technical execution across Retail, Telco, Finance, and Insurance. Currently owns the Customer 360 Feature Store on Databricks, built on integrated data from 8+ business units. Proven track record in defining data and AI product roadmaps, managing backlogs, and leading cross-functional teams to deliver end-to-end ML solutions. Experienced in stakeholder management, driving adoption of data products, and building practical AI applications including agentic assistants and AI-assisted engineering workflows."
+    bio: "Data Science Lead with 8 years of experience bridging business strategy and technical execution across Retail, Telco, Finance, and Insurance. Track record of taking data platforms and ML products from zero to production, defining data and AI roadmaps, and leading cross-functional teams. Experienced in stakeholder management up to BOD level, driving adoption of data products, and building practical AI applications including agentic assistants and AI-assisted engineering workflows."
   },
 
   skills: {
@@ -36,12 +36,11 @@ const portfolioConfig = {
       duration: "May 2026 – Present",
       location: "Ha Noi, Vietnam",
       achievements: [
-        "Owner of the Customer 360 Feature Store within the group's centralized data function, consuming integrated data from 8+ Vingroup P&Ls to serve data science and analytics use cases",
+        "Own the C360 Feature Store in the group's centralized data function, consuming integrated data from 8+ Vingroup P&Ls to serve data science and analytics use cases",
         {
-          main: "Led a project team of 3 to deliver Feature Store v1 from kick-off to go-live in 2.5 months:",
+          main: "Led a team of 3 to deliver C360 v1 from kick-off to go-live in 2.5 months:",
           sub: [
-            "2,000+ curated features governed under Databricks Unity Catalog, processing billions of records",
-            "Batch pipelines designed and tuned to complete within ~1 hour in the worst case at full scale",
+            "2,000+ curated features governed under Databricks Unity Catalog, processing billions of records (optimized to run within 1 hour at full scale)",
             "Built the core framework, then standardized the feature development lifecycle with AI agent skills for scaffolding, code review, and documentation",
             "Defined the roadmap for the serving layer (API and file-based delivery) and the initial use-case pipeline for onboarding consumers"
           ]
@@ -55,11 +54,10 @@ const portfolioConfig = {
       duration: "Aug 2024 – Apr 2026",
       location: "Ha Noi, Vietnam",
       achievements: [
-        "Led a team of 3 members (Analysts, Engineers, Scientists) using Agile methodologies to deliver ML solutions aligned with business goals",
-        "Established the team's OKRs, ensuring alignment between technical roadmaps and company strategic objectives",
-        "Mentored juniors on best practices, fostering skill growth and enhancing team velocity through structured knowledge sharing",
-        "Served as primary technical point of contact for external partners, including problem scoping, solution design, presenting and reporting to partner BOD",
-        "Implemented MLOps practices: Collaborated with DevOps for server infrastructure and setup environments for model deployment, monitoring, and maintenance",
+        "Led a team of 3 (Analysts, Engineers, Scientists) in an Agile delivery model",
+        "Established the team's OKRs aligned with company objectives",
+        "Primary technical contact for external partners: problem scoping, solution design, and presenting to partner BOD",
+        "Defined MLOps infrastructure requirements provisioned by DevOps",
         {
           main: "Delivered projects:",
           sub: [
@@ -69,7 +67,7 @@ const portfolioConfig = {
             "Logistic regression optimization for a financial institution: Achieved 30-40% Gini uplift over existing models",
             "Laos market: Developed Credit Score model for unbanked segments by combining e‑wallet and telco data using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
             "Built Nutri, a multi-agent AI nutrition assistant prototype with tool orchestration for profile management, calorie-needs estimation, personalized meal-plan generation, and grocery/inventory workflows",
-            "Merchant lending LeadGen for a logistics partner: collaborated with FI to define merchant eligibility criteria and delivered rule-based filtering pipeline for in-app loan invitation targeting"
+            "Merchant lending LeadGen for a logistics partner: owned the end-to-end flow — data processing, eligibility criteria defined with the FI, campaign targeting, and in-app loan performance analysis"
           ]
         },
         {
