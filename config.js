@@ -8,7 +8,7 @@ const portfolioConfig = {
     website: "",
     linkedin: "https://www.linkedin.com/in/huy-phan-270014111/",
     github: "",
-    bio: "Data Science Lead with 8 years of experience bridging business strategy and technical execution across Retail, Telco, Finance, and Insurance. Track record of taking data platforms and ML products from zero to production, defining data and AI roadmaps, and leading cross-functional teams. Experienced in stakeholder management up to BOD level, driving adoption of data products, and building practical AI applications including agentic assistants and AI-assisted engineering workflows."
+    bio: "Data Science Lead with 8 years of experience across Retail, Telco, Finance, and Insurance, translating between business stakeholders and technical teams. Take data platforms and ML products from kick-off to production, own the roadmap that gets them adopted, and build practical AI applications including agentic assistants and AI-assisted engineering workflows."
   },
 
   skills: {
@@ -158,8 +158,7 @@ const portfolioConfig = {
 
   languages: [
     {
-      name: "English",
-      level: "TOEIC 665"
+      name: "English"
     },
   ]
 };
