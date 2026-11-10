@@ -36,16 +36,15 @@ const portfolioConfig = {
       duration: "May 2026 – Present",
       location: "Ha Noi, Vietnam",
       achievements: [
-        "Own the C360 Feature Store in the group's centralized data function, consuming integrated data from 8+ Vingroup P&Ls to serve data science and analytics use cases",
         {
-          main: "Led a team of 3 to deliver C360 v1 from kick-off to go-live in 2.5 months:",
+          main: "Led a team of 7 to deliver:",
           sub: [
-            "2,000+ curated features governed under Databricks Unity Catalog, processing billions of records (optimized to run within 1 hour at full scale)",
-            "Built the core framework, then standardized the feature development lifecycle with AI agent skills for scaffolding, code review, and documentation",
-            "Defined the roadmap for the serving layer (API and file-based delivery) and the initial use-case pipeline for onboarding consumers"
+            "C360 Feature Store: Launched v1 in 2.5 months with an initial team of 3, delivering 2,000+ features using data from 8+ Vingroup P&Ls.",
+            "AI signals: Age and gender prediction, household profiling, engagement scoring, and affluence/income ranking.",
+            "Vinhomes lead scoring: Ranked customers by likelihood of buying a home (AUC > 0.85)."
           ]
         },
-        "Built a lead scoring model for Vinhomes ranking existing Vingroup customers by home-purchase propensity (AUC > 85%)"
+        "Standardized the development process using AI agent skills for scaffolding, code review, and documentation."
       ]
     },
     {
@@ -55,36 +54,17 @@ const portfolioConfig = {
       location: "Ha Noi, Vietnam",
       achievements: [
         "Led a team of 3 (Analysts, Engineers, Scientists) in an Agile delivery model",
-        "Established the team's OKRs aligned with company objectives",
-        "Primary technical contact for external partners: problem scoping, solution design, and presenting to partner BOD",
-        "Defined MLOps infrastructure requirements provisioned by DevOps",
+        "Defined project scope with partners and designed the technical solutions.",
         {
           main: "Delivered projects:",
           sub: [
-            "Built Telco-based Credit Score models for thin-file customers (Gini 55%), delivering a >70% performance uplift when combined with the partner's internal model",
-            "Propensity score (Gini: 70%) to enhance campaign targeting",
-            "Location verification score to enhance partner operational accuracy",
-            "Logistic regression optimization for a financial institution: Achieved 30-40% Gini uplift over existing models",
-            "Laos market: Developed Credit Score model for unbanked segments by combining e‑wallet and telco data using proxy labeling and transfer learning-inspired techniques, achieving Gini 52%, established A/B testing roadmap",
-            "Built Nutri, a multi-agent AI nutrition assistant prototype with tool orchestration for profile management, calorie-needs estimation, personalized meal-plan generation, and grocery/inventory workflows",
-            "Merchant lending LeadGen for a logistics partner: owned the end-to-end flow — data processing, eligibility criteria defined with the FI, campaign targeting, and in-app loan performance analysis"
+            "Used telco data to build credit and propensity scoring models for Vietnam and Laos (Gini 52–55% and 70%, respectively) and a location verification score.",
+            "Improved a financial institution’s model Gini by 30–40%.",
+            "Led merchant lending lead generation for a logistics partner, from eligibility and targeting to loan performance analysis.",
+            "Prototyped Nutri, a multi-agent AI assistant for personalized meal planning."
           ]
         },
-        {
-          main: "Designed and implemented an ML platform:",
-          sub: [
-            "Data stack: Data pipelines, feature store, data quality controls",
-            "Model stack: training pipeline with reproducibility and automation",
-            "Deployment stack: scheduling, model monitoring, and alerts",
-            "CI/CD pipeline: designed and implemented a workflow for automated deployment and version control"
-          ]
-        },
-        {
-          main: "Tools/Technologies:",
-          sub: [
-            "Spark (distributed processing), Airflow (orchestration), MLflow (experiment & registry), Great Expectations (data quality), DataHub (metadata & lineage), FastAPI (batch prediction access), Grafana (monitoring), Git-based CI/CD"
-          ]
-        },
+        "Built an ML platform for feature pipelines, model training, deployment, and monitoring, with automated CI/CD."
       ]
     },
     {
