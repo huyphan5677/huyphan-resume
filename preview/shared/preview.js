@@ -8,7 +8,8 @@
         { id: 'd', name: 'Notebook' },
         { id: 'e', name: 'Editorial' },
         { id: 'f', name: 'Split Sticky' },
-        { id: 'g', name: 'Slate Mix' }
+        { id: 'g', name: 'Slate Mix' },
+        { id: 'h', name: 'Notebook Clean' }
     ];
 
     const ICONS = {
