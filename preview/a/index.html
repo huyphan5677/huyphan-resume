@@ -171,9 +171,6 @@
 
         /* ---------- Sections ---------- */
         .section {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 32px;
             padding: 56px 0;
             border-top: 1px solid var(--border);
         }
@@ -184,8 +181,11 @@
             text-transform: uppercase;
             letter-spacing: 0.12em;
             color: var(--text-muted);
-            padding-top: 4px;
+            margin-bottom: 28px;
         }
+
+        /* Keep the timeline line aligned with the left edge of the hero text */
+        .timeline { padding-left: 4px; }
 
         /* ---------- Experience timeline ---------- */
         .timeline { position: relative; }
@@ -318,11 +318,8 @@
             .wrap { padding: 0 16px; }
             .nav-links { display: none; }
             .hero { padding: 56px 0 48px; }
-            .section {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 40px 0;
-            }
+            .section { padding: 40px 0; }
+            .section-label { margin-bottom: 20px; }
             .job { padding-left: 20px; }
         }
 
