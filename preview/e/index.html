@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>E · Editorial — Phan Minh Huy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #131416;
+            --surface: #18191C;
+            --border: #2A2B2F;
+            --text: #E6E4E1;
+            --text-muted: #9B9893;
+            --accent: #C9A1A7;
+            --accent-soft: rgba(201, 161, 167, 0.12);
+            --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+            --ease: cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: inherit; }
+
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+        .wrap { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+
+        /* ---------- Masthead ---------- */
+        .masthead {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 28px 0 16px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .masthead a { text-decoration: none; }
+
+        .masthead a:hover { color: var(--text); }
+
+        header { padding: 72px 0 56px; }
+
+        h1 {
+            font-family: var(--serif);
+            font-weight: 500;
+            font-size: clamp(2.75rem, 8vw, 4.5rem);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .standfirst {
+            margin-top: 16px;
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.35rem;
+            color: var(--accent);
+        }
+
+        .lede {
+            margin-top: 32px;
+            font-family: var(--serif);
+            font-size: 1.28rem;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .byline {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4px 20px;
+            margin-top: 32px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .byline a,
+        .text-btn {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            transition: color 200ms var(--ease);
+        }
+
+        .byline a:hover, .text-btn:hover { color: var(--accent); }
+
+        .text-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            min-height: 36px;
+            background: none;
+            border: 0;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .text-btn svg.i, svg.i {
+            width: 15px; height: 15px; flex-shrink: 0;
+            fill: none; stroke: currentColor; stroke-width: 1.75;
+            stroke-linecap: round; stroke-linejoin: round;
+        }
+
+        .text-btn.is-done { color: var(--accent); }
+
+        /* ---------- Sections ---------- */
+        section { padding: 48px 0 16px; }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: var(--serif);
+            font-weight: 500;
+            font-size: 1.75rem;
+            margin-bottom: 32px;
+        }
+
+        h2::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+        .job { margin-bottom: 44px; }
+
+        .job h3 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.25;
+        }
+
+        .job-meta {
+            margin-top: 4px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .job-meta em { font-style: normal; color: var(--accent); }
+
+        .bullets { list-style: none; display: grid; gap: 10px; margin-top: 16px; }
+
+        .bullets li { position: relative; padding-left: 20px; font-size: 0.98rem; }
+
+        .bullets li::before {
+            content: "";
+            position: absolute; left: 3px; top: 0.8em;
+            width: 8px; height: 1px;
+            background: var(--accent);
+        }
+
+        .bullets .bullets { margin-top: 8px; gap: 6px; }
+
+        .bullets .bullets li { color: var(--text-muted); font-size: 0.95rem; }
+
+        .bullets .bullets li::before { background: var(--text-muted); width: 5px; }
+
+        .edu { margin-bottom: 24px; }
+
+        .edu h3 { font-family: var(--serif); font-weight: 500; font-size: 1.2rem; }
+
+        .skills { font-family: var(--serif); font-size: 1.15rem; line-height: 1.8; }
+
+        .skills p + p { margin-top: 12px; }
+
+        .skills strong {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-right: 8px;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding: 24px 0 104px;
+            border-top: 1px solid var(--border);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            .wrap { padding: 0 16px; }
+            header { padding: 48px 0 40px; }
+            .lede { font-size: 1.15rem; }
+            .masthead span:last-child { display: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="masthead">
+            <span id="mast-left"></span>
+            <span><a href="../../resume.html" target="_blank" rel="noopener">Resume</a></span>
+        </div>
+
+        <header>
+            <h1 id="name"></h1>
+            <p class="standfirst" id="title"></p>
+            <p class="lede" id="bio"></p>
+            <div class="byline" id="byline"></div>
+        </header>
+
+        <main>
+            <section aria-labelledby="exp-h">
+                <h2 id="exp-h">Experience</h2>
+                <div id="experience"></div>
+            </section>
+
+            <section aria-labelledby="edu-h">
+                <h2 id="edu-h">Education</h2>
+                <div id="education"></div>
+            </section>
+
+            <section aria-labelledby="skills-h">
+                <h2 id="skills-h">Skills</h2>
+                <div class="skills" id="skills"></div>
+            </section>
+        </main>
+
+        <footer id="footer"></footer>
+    </div>
+
+    <script src="../../config.js"></script>
+    <script src="../shared/preview.js"></script>
+    <script>
+        const { esc, phoneHref, renderBullets, bindCopyEmail, mountSwitcher } = Preview;
+        const c = window.portfolioConfig;
+        const p = c.personal;
+
+        document.getElementById('mast-left').textContent = `Portfolio · ${p.location}`;
+        document.getElementById('name').textContent = p.name;
+        document.getElementById('title').textContent = p.title;
+        document.getElementById('bio').textContent = p.bio;
+
+        document.getElementById('byline').innerHTML = `
+            <a href="mailto:${esc(p.email)}">${esc(p.email)}</a>
+            <button type="button" class="text-btn" id="copy-email"></button>
+            <a href="${phoneHref(p.phone)}">${esc(p.phone)}</a>
+            ${p.linkedin ? `<a href="${esc(p.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>` : ''}
+        `;
+        bindCopyEmail(document.getElementById('copy-email'), p.email, { idle: 'Copy', done: 'Copied' });
+
+        document.getElementById('experience').innerHTML = c.experience.map((job) => `
+            <article class="job">
+                <h3>${esc(job.company)}</h3>
+                <div class="job-meta"><em>${esc(job.position)}</em> · ${esc(job.duration)} · ${esc(job.location)}</div>
+                ${renderBullets(job.achievements)}
+            </article>
+        `).join('');
+
+        document.getElementById('education').innerHTML = c.education.map((edu) => `
+            <article class="edu">
+                <h3>${esc(edu.degree)}</h3>
+                <div class="job-meta">${esc(edu.institution)} · ${esc(edu.duration)}</div>
+            </article>
+        `).join('');
+
+        const skillParas = Object.entries(c.skills).map(([name, list]) =>
+            `<p><strong>${esc(name)}</strong>${list.map(esc).join(', ')}</p>`);
+        if (c.languages && c.languages.length) {
+            skillParas.push(`<p><strong>Languages</strong>${c.languages.map((l) => esc(l.name)).join(', ')}</p>`);
+        }
+        document.getElementById('skills').innerHTML = skillParas.join('');
+
+        document.getElementById('footer').textContent = `© ${new Date().getFullYear()} ${p.name}`;
+
+        mountSwitcher('e');
+    </script>
+</body>
+</html>

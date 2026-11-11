@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>Phan Minh Huy — Portfolio (Preview C: Bento)</title>
+    <title>C · Bento Dark — Phan Minh Huy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -330,32 +330,6 @@
             color: var(--text-muted);
         }
 
-        /* ---------- Preview switcher ---------- */
-        .preview-switch {
-            position: fixed;
-            right: 16px;
-            bottom: 16px;
-            z-index: 20;
-            display: flex;
-            gap: 4px;
-            padding: 4px;
-            background: var(--surface);
-            border: 1px solid var(--border-hover);
-            border-radius: 999px;
-            font-size: 0.8rem;
-        }
-
-        .preview-switch a {
-            display: inline-flex;
-            align-items: center;
-            min-height: 32px;
-            padding: 0 12px;
-            border-radius: 999px;
-            color: var(--text-muted);
-        }
-
-        .preview-switch a[aria-current="page"] { background: var(--accent-soft); color: var(--text); }
-
         /* ---------- Responsive ---------- */
         @media (max-width: 960px) {
             .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -428,14 +402,11 @@
         <footer id="footer"></footer>
     </main>
 
-    <nav class="preview-switch" aria-label="Design previews">
-        <a href="../slate/">A · Slate</a>
-        <a href="../bento/" aria-current="page">C · Bento</a>
-        <a href="../../">Current</a>
-    </nav>
-
     <script src="../../config.js"></script>
+    <script src="../shared/preview.js"></script>
     <script>
+        Preview.mountSwitcher('c');
+
         // Preview-only highlight tiles. If this design is approved, move these into config.js.
         const HIGHLIGHTS = [
             { value: '8', unit: 'yrs', label: 'Across Retail, Telco, Finance, and Insurance' },
