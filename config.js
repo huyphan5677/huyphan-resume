@@ -48,17 +48,17 @@ const portfolioConfig = {
       ]
     },
     {
-      company: "Blueinfo Jsc",
+      company: "Blueinfo JSC",
       position: "Data Team Lead",
       duration: "Aug 2024 – Apr 2026",
       location: "Ha Noi, Vietnam",
       achievements: [
-        "Led a team of 3 (Analysts, Engineers, Scientists) in an Agile delivery model",
+        "Led a team of 3 (Analysts, Engineers, Scientists) in an Agile delivery model.",
         "Defined project scope with partners and designed the technical solutions.",
         {
           main: "Delivered projects:",
           sub: [
-            "Used telco data to build credit and propensity scoring models for Vietnam and Laos (Gini 52–55% and 70%, respectively).",
+            "Built telco-based credit and propensity models for Vietnam and Laos (credit Gini 52–55%, propensity Gini 65–70%), with >70% uplift when combined with the partner's model.",
             "Improved a financial institution’s model Gini by 30–40%.",
             "Led merchant lending lead generation for a logistics partner, from eligibility and targeting to loan performance analysis.",
             "Prototyped Nutri, a multi-agent AI assistant for personalized meal planning."
