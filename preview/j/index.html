@@ -286,6 +286,18 @@
             font-size: 0.93rem;
         }
 
+        /* First-level bullets: small accent chevron; nested bullets keep the muted dash */
+        .job > .bullets > li::before {
+            left: 1px;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: none;
+            border-top: 1.5px solid var(--accent);
+            border-right: 1.5px solid var(--accent);
+            transform: rotate(45deg);
+        }
+
         /* ---------- Education ---------- */
         .edu-list { display: grid; gap: 24px; }
 
