@@ -76,15 +76,15 @@ const portfolioConfig = {
         {
           main: "Delivered multiple predictive models driving strategic business outcomes:",
           sub: [
-            "Customer propensity models for cross-sell campaigns",
-            "Early churn prediction to reduce lapse rates",
-            "Automated claim for operational efficiency",
-            "Agent clustering and leadership potential prediction models"
+            "Customer propensity models for cross-sell campaigns.",
+            "Early churn prediction to reduce lapse rates.",
+            "Automated claim for operational efficiency.",
+            "Agent clustering and leadership potential prediction models."
           ]
         },
-        "Promoted adoption of AI/ML across departments through internal workshops and training initiatives",
-        "Utilized SHAP, conformal prediction, and graph analysis for model explainability and advanced analytics",
-        "Collaborated with the Data Engineering team to build a scalable data warehouse, ensuring robust data pipelines to support analytics and machine learning workflows"
+        "Promoted adoption of AI/ML across departments through internal workshops and training initiatives.",
+        "Utilized SHAP, conformal prediction, and graph analysis for model explainability and advanced analytics.",
+        "Collaborated with the Data Engineering team to build a scalable data warehouse, ensuring robust data pipelines to support analytics and machine learning workflows."
       ]
     },
     {
@@ -93,11 +93,11 @@ const portfolioConfig = {
       duration: "Aug 2020 – Jun 2022",
       location: "Ho Chi Minh City, Vietnam",
       achievements: [
-        "Designed and implemented lead scoring models with Gini scores of 64–70%, improving campaign targeting efficiency",
-        "Extracted community features from telecom data using GraphFrames, DBScan, and KMeans",
-        "Deployed optimization algorithms (Ortools) to maximize LeadGen ROI while minimizing operational costs",
-        "Standardized operations and performance monitoring for Mortgage LeadGen services with telco partners",
-        "Delivered ad-hoc analyses and A/B testing frameworks to guide data-informed decision-making"
+        "Designed and implemented lead scoring models with Gini scores of 64–70%, improving campaign targeting efficiency.",
+        "Extracted community features from telecom data using GraphFrames, DBScan, and KMeans.",
+        "Deployed optimization algorithms (Ortools) to maximize LeadGen ROI while minimizing operational costs.",
+        "Standardized operations and performance monitoring for Mortgage LeadGen services with telco partners.",
+        "Delivered ad-hoc analyses and A/B testing frameworks to guide data-informed decision-making."
       ]
     },
     {
@@ -106,11 +106,11 @@ const portfolioConfig = {
       duration: "Oct 2018 – Jul 2020",
       location: "Ho Chi Minh City, Vietnam",
       achievements: [
-        "Built demand and price forecasting models for fertilizer products globally and domestically, achieving MAPE < 1%",
-        "Built end-to-end ML pipelines in Alteryx for DFS Group's sales forecasting, from data processing to AutoML with Champion-Challenger model selection",
-        "Solved Market Basket Analysis and Store Clustering challenges for retail clients",
-        "Collaborated with BI Developers to build dashboards and data storytelling from ML outputs",
-        "Teaching assistant and curriculum designer for specialized consultant training courses"
+        "Built demand and price forecasting models for fertilizer products globally and domestically, achieving MAPE < 1%.",
+        "Built end-to-end ML pipelines in Alteryx for DFS Group's sales forecasting, from data processing to AutoML with Champion-Challenger model selection.",
+        "Solved Market Basket Analysis and Store Clustering challenges for retail clients.",
+        "Collaborated with BI Developers to build dashboards and data storytelling from ML outputs.",
+        "Teaching assistant and curriculum designer for specialized consultant training courses."
     ]
     }
   ],
