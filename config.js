@@ -47,7 +47,7 @@ const portfolioConfig = {
       ]
     },
     {
-      company: "Blueinfo JSC",
+      company: "Blueinfo",
       position: "Data Team Lead",
       duration: "Aug 2024 – Apr 2026",
       location: "Ha Noi, Vietnam",
@@ -87,7 +87,7 @@ const portfolioConfig = {
       ]
     },
     {
-      company: "CIC Data JSC",
+      company: "CIC Data",
       position: "Data Scientist / Analyst",
       duration: "Aug 2020 – Jun 2022",
       location: "Ho Chi Minh City, Vietnam",
@@ -122,7 +122,7 @@ const portfolioConfig = {
         location: "Ha Noi, Vietnam",
     },
     {
-      institution: "Ho Chi Minh University of Science",
+      institution: "Ho Chi Minh City University of Science",
       degree: "Master of Data Science",
       duration: "Completed 2025",
       location: "Ho Chi Minh City, Vietnam",
