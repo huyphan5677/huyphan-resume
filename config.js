@@ -43,8 +43,7 @@ const portfolioConfig = {
             "AI signals: Age and gender prediction, household profiling, engagement scoring, and affluence/income ranking.",
             "Vinhomes lead scoring: Ranked customers by likelihood of buying a home (AUC > 0.85)."
           ]
-        },
-        "Standardized the development process using AI agent skills for scaffolding, code review, and documentation."
+        }
       ]
     },
     {
