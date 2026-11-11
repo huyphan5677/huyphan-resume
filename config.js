@@ -87,7 +87,7 @@ const portfolioConfig = {
       ]
     },
     {
-      company: "CIC Data Jsc",
+      company: "CIC Data JSC",
       position: "Data Scientist / Analyst",
       duration: "Aug 2020 – Jun 2022",
       location: "Ho Chi Minh City, Vietnam",
