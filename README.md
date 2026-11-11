@@ -3,9 +3,9 @@
 A modern, responsive portfolio website with two distinct views:
 
 ## 🌐 Web View (`index.html`)
-- Modern, interactive portfolio website
-- Tabbed navigation (About, Experience, Education, Skills)
-- Responsive design with beautiful gradients and animations
+- Dark, low-glare theme in a centered single column
+- Sticky top navigation with icons (About Me, Experience, Education, Skills) and a Resume button
+- Experience shown as a timeline
 - Mobile-friendly layout
 - Contact information with clickable links
 
