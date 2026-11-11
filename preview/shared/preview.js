@@ -10,7 +10,8 @@
         { id: 'f', name: 'Split Sticky' },
         { id: 'g', name: 'Slate Mix' },
         { id: 'h', name: 'Notebook Clean' },
-        { id: 'i', name: 'Classic Slate' }
+        { id: 'i', name: 'Classic Slate' },
+        { id: 'j', name: 'Slate Centered' }
     ];
 
     const ICONS = {
