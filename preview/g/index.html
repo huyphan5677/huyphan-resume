@@ -182,19 +182,29 @@
 
         .bullets .bullets li { color: var(--text-muted); font-size: 0.92rem; }
 
-        /* Education */
-        .edu-list { display: grid; gap: 20px; }
+        /* Education: same card grid as experience */
+        .edu-list { display: grid; gap: 16px; }
 
-        .edu-item { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 0 24px; }
+        .edu-degree { font-size: 1.05rem; font-weight: 600; }
 
-        .edu-degree { font-weight: 600; }
+        /* Skills: one card, one row per group, same two-column grid; chips from D */
+        .skills-card {
+            padding: 8px 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
 
-        .edu-school { color: var(--text-muted); font-size: 0.95rem; }
+        .skill-row {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 24px;
+            padding: 16px 0;
+        }
 
-        /* Skills: notebook style (from D) */
-        .skills { display: grid; gap: 20px; }
+        .skill-row + .skill-row { border-top: 1px solid var(--border); }
 
-        .chips-label { font-family: var(--mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px; }
+        .chips-label { font-family: var(--mono); font-size: 0.82rem; color: var(--accent); padding-top: 4px; }
 
         .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 
@@ -233,7 +243,8 @@
             .hero { padding: 96px 0 48px; }
             section { padding: 40px 0; }
             .job { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
-            .edu-item { grid-template-columns: 1fr; gap: 2px; padding: 0; }
+            .skills-card { padding: 4px 20px; }
+            .skill-row { grid-template-columns: 1fr; gap: 10px; }
         }
 
         @media (max-width: 560px) {
@@ -284,7 +295,7 @@
 
         <section id="skills" aria-labelledby="skills-title">
             <h2 class="section-title" id="skills-title">Skills</h2>
-            <div class="skills" id="skills-list"></div>
+            <div class="skills-card" id="skills-list"></div>
         </section>
     </main>
 
@@ -351,28 +362,27 @@
         `).join('');
 
         document.getElementById('education-list').innerHTML = c.education.map((edu) => `
-            <div class="edu-item">
-                <div class="job-date">${esc(edu.duration)}</div>
+            <article class="job">
                 <div>
-                    <div class="edu-degree">${esc(edu.degree)}</div>
-                    <div class="edu-school">${esc(edu.institution)}</div>
+                    <div class="job-date">${esc(edu.duration)}</div>
+                    <div class="job-company">${esc(edu.institution)}</div>
+                    <div class="job-loc">${esc(edu.location)}</div>
                 </div>
-            </div>
+                <div>
+                    <h3 class="edu-degree">${esc(edu.degree)}</h3>
+                </div>
+            </article>
         `).join('');
 
-        const skillBlocks = Object.entries(c.skills).map(([name, list]) => `
-            <div>
-                <div class="chips-label">${esc(name)}</div>
-                <div class="chips">${list.map((s) => `<span class="chip">${esc(s)}</span>`).join('')}</div>
+        const skillRow = (label, items) => `
+            <div class="skill-row">
+                <div class="chips-label">${esc(label)}</div>
+                <div class="chips">${items.map((s) => `<span class="chip">${esc(s)}</span>`).join('')}</div>
             </div>
-        `);
+        `;
+        const skillBlocks = Object.entries(c.skills).map(([name, list]) => skillRow(name, list));
         if (c.languages && c.languages.length) {
-            skillBlocks.push(`
-                <div>
-                    <div class="chips-label">languages</div>
-                    <div class="chips">${c.languages.map((l) => `<span class="chip">${esc(l.name)}</span>`).join('')}</div>
-                </div>
-            `);
+            skillBlocks.push(skillRow('languages', c.languages.map((l) => l.name)));
         }
         document.getElementById('skills-list').innerHTML = skillBlocks.join('');
 
