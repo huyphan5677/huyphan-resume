@@ -58,7 +58,7 @@ const portfolioConfig = {
         {
           main: "Delivered projects:",
           sub: [
-            "Used telco data to build credit and propensity scoring models for Vietnam and Laos (Gini 52–55% and 70%, respectively) and a location verification score.",
+            "Used telco data to build credit and propensity scoring models for Vietnam and Laos (Gini 52–55% and 70%, respectively).",
             "Improved a financial institution’s model Gini by 30–40%.",
             "Led merchant lending lead generation for a logistics partner, from eligibility and targeting to loan performance analysis.",
             "Prototyped Nutri, a multi-agent AI assistant for personalized meal planning."
