@@ -9,7 +9,8 @@
         { id: 'e', name: 'Editorial' },
         { id: 'f', name: 'Split Sticky' },
         { id: 'g', name: 'Slate Mix' },
-        { id: 'h', name: 'Notebook Clean' }
+        { id: 'h', name: 'Notebook Clean' },
+        { id: 'i', name: 'Classic Slate' }
     ];
 
     const ICONS = {
@@ -256,6 +257,11 @@
         .preview-switch a:hover { color: var(--text, #D6DBE1); }
         .preview-switch a[aria-current="page"] { background: var(--accent-soft, rgba(255,255,255,0.08)); color: var(--text, #D6DBE1); }
         .preview-switch .ps-all { padding: 0 12px; border-right: 1px solid var(--border, #2A3038); border-radius: 999px 0 0 999px; margin-right: 2px; }
+        @media (max-width: 440px) {
+            .preview-switch { left: 8px; right: 8px; bottom: 8px; gap: 0; justify-content: space-between; }
+            .preview-switch a { min-width: 0; flex: 1 1 0; padding: 0; }
+            .preview-switch .ps-all { flex: 1.4 1 0; padding: 0 6px; }
+        }
         .career-chart { width: 100%; height: auto; display: block; overflow: visible; }
         .career-chart .cc-grid { stroke: var(--border, #2A3038); stroke-width: 1; }
         .career-chart .cc-axis { fill: var(--text-muted, #8A94A0); font-size: 11px; font-variant-numeric: tabular-nums; }
