@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Phan Minh Huy — Portfolio (Preview C: Bento)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0E1311;
+            --surface: #151B18;
+            --surface-2: #1A211E;
+            --border: #222A26;
+            --border-hover: #34403A;
+            --text: #DCE3DE;
+            --text-muted: #8C9A92;
+            --accent: #86B39A;
+            --accent-soft: rgba(134, 179, 154, 0.12);
+            --radius: 16px;
+            --gap: 16px;
+            --max: 1120px;
+            --ease: cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 48px 24px 96px;
+        }
+
+        svg.i {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* ---------- Bento grid ---------- */
+        .bento {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: var(--gap);
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: border-color 200ms var(--ease);
+            min-width: 0;
+        }
+
+        .tile:hover { border-color: var(--border-hover); }
+
+        .span-2 { grid-column: span 2; }
+        .row-2 { grid-row: span 2; }
+
+        .eyebrow {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+        }
+
+        /* Intro */
+        .intro {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 32px;
+        }
+
+        .intro .eyebrow { color: var(--accent); }
+
+        .intro h1 {
+            font-size: clamp(2rem, 4.2vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .intro .bio {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+            max-width: 60ch;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 8px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 44px;
+            padding: 0 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border-hover);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 200ms var(--ease), border-color 200ms var(--ease);
+        }
+
+        .btn:hover { background: var(--surface-2); }
+
+        .btn.primary {
+            background: var(--accent-soft);
+            border-color: transparent;
+            color: var(--accent);
+        }
+
+        .btn.primary:hover { background: rgba(134, 179, 154, 0.2); }
+
+        /* Stats */
+        .stat {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 168px;
+        }
+
+        .stat-value {
+            font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-value small {
+            font-size: 0.5em;
+            font-weight: 500;
+            color: var(--accent);
+            margin-left: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Now */
+        .now-role {
+            margin-top: 12px;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .now-company { color: var(--accent); font-size: 0.95rem; }
+
+        .now-meta {
+            margin-top: 4px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* Skills */
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .chip {
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .chip.soft { color: var(--text-muted); }
+
+        /* Education */
+        .edu {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .edu-degree { font-weight: 600; font-size: 0.95rem; }
+
+        .edu-meta { font-size: 0.85rem; color: var(--text-muted); }
+
+        /* Contact */
+        .contact-list {
+            list-style: none;
+            display: grid;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .contact-list a,
+        .contact-list span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 40px;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            transition: color 200ms var(--ease);
+            overflow-wrap: anywhere;
+        }
+
+        .contact-list a:hover { color: var(--text); }
+
+        /* ---------- Experience ---------- */
+        .exp-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 72px 0 20px;
+        }
+
+        .exp-head h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .exp-list { display: grid; gap: var(--gap); }
+
+        .job {
+            display: grid;
+            grid-template-columns: 240px minmax(0, 1fr);
+            gap: 24px;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .job-company {
+            margin-top: 6px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .job-loc { font-size: 0.85rem; color: var(--text-muted); }
+
+        .job-role { font-size: 1.1rem; font-weight: 600; }
+
+        .bullets {
+            list-style: none;
+            display: grid;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .bullets li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 0.95rem;
+        }
+
+        .bullets li::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 0.68em;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--border-hover);
+        }
+
+        .bullets .bullets { margin-top: 8px; gap: 6px; }
+
+        .bullets .bullets li { color: var(--text-muted); font-size: 0.92rem; }
+
+        footer {
+            margin-top: 56px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ---------- Preview switcher ---------- */
+        .preview-switch {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            z-index: 20;
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background: var(--surface);
+            border: 1px solid var(--border-hover);
+            border-radius: 999px;
+            font-size: 0.8rem;
+        }
+
+        .preview-switch a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 32px;
+            padding: 0 12px;
+            border-radius: 999px;
+            color: var(--text-muted);
+        }
+
+        .preview-switch a[aria-current="page"] { background: var(--accent-soft); color: var(--text); }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 960px) {
+            .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .row-2 { grid-row: auto; }
+            .job { grid-template-columns: 1fr; gap: 12px; }
+        }
+
+        @media (max-width: 560px) {
+            .wrap { padding: 24px 16px 88px; }
+            .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+            .intro { padding: 24px; }
+            .stat { min-height: 0; padding: 18px; }
+            .stat-label { font-size: 0.82rem; }
+            .exp-head { margin-top: 48px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <section class="bento" aria-label="Overview">
+            <div class="tile intro span-2 row-2">
+                <p class="eyebrow" id="title"></p>
+                <h1 id="name"></h1>
+                <p class="bio" id="bio"></p>
+                <div class="actions">
+                    <a class="btn primary" href="../../resume.html" target="_blank" rel="noopener">
+                        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
+                        View resume
+                    </a>
+                    <a class="btn" href="#experience">Experience</a>
+                </div>
+            </div>
+
+            <!-- Stat tiles are rendered here -->
+            <div id="stats" style="display: contents;"></div>
+
+            <div class="tile span-2">
+                <p class="eyebrow">Currently</p>
+                <div id="now"></div>
+            </div>
+
+            <div class="tile span-2">
+                <p class="eyebrow">Skills</p>
+                <div class="chips" id="skills"></div>
+            </div>
+
+            <div class="tile span-2">
+                <p class="eyebrow">Education</p>
+                <ul class="edu" id="education"></ul>
+            </div>
+
+            <div class="tile span-2">
+                <p class="eyebrow">Get in touch</p>
+                <ul class="contact-list" id="contact"></ul>
+            </div>
+        </section>
+
+        <section id="experience" aria-labelledby="exp-title">
+            <div class="exp-head">
+                <h2 id="exp-title">Experience</h2>
+            </div>
+            <div class="exp-list" id="experience-list"></div>
+        </section>
+
+        <footer id="footer"></footer>
+    </main>
+
+    <nav class="preview-switch" aria-label="Design previews">
+        <a href="../slate/">A · Slate</a>
+        <a href="../bento/" aria-current="page">C · Bento</a>
+        <a href="../../">Current</a>
+    </nav>
+
+    <script src="../../config.js"></script>
+    <script>
+        // Preview-only highlight tiles. If this design is approved, move these into config.js.
+        const HIGHLIGHTS = [
+            { value: '8', unit: 'yrs', label: 'Across Retail, Telco, Finance, and Insurance' },
+            { value: '2,000+', unit: '', label: 'Features shipped in the C360 Feature Store v1' },
+            { value: '7', unit: 'people', label: 'Team currently led at Vinsmart Future' },
+            { value: '>70%', unit: '', label: 'Uplift from telco credit scores combined with a partner model' }
+        ];
+
+        const ICONS = {
+            mail: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+            phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+            pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+            linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>'
+        };
+
+        const esc = (s) => String(s)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        const icon = (name) => `<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
+
+        function renderBullets(items) {
+            return `<ul class="bullets">${items.map((item) => {
+                if (typeof item === 'object' && item.main) {
+                    return `<li>${esc(item.main)}${renderBullets(item.sub)}</li>`;
+                }
+                return `<li>${esc(item)}</li>`;
+            }).join('')}</ul>`;
+        }
+
+        function render() {
+            const c = window.portfolioConfig;
+            const p = c.personal;
+
+            document.getElementById('name').textContent = p.name;
+            document.getElementById('title').textContent = p.title;
+            document.getElementById('bio').textContent = p.bio;
+
+            document.getElementById('stats').innerHTML = HIGHLIGHTS.map((h) => `
+                <div class="tile stat">
+                    <div class="stat-value">${esc(h.value)}${h.unit ? `<small>${esc(h.unit)}</small>` : ''}</div>
+                    <div class="stat-label">${esc(h.label)}</div>
+                </div>
+            `).join('');
+
+            const current = c.experience[0];
+            document.getElementById('now').innerHTML = `
+                <div class="now-role">${esc(current.position)}</div>
+                <div class="now-company">${esc(current.company)}</div>
+                <div class="now-meta"><span class="status">${esc(current.duration)}</span> · ${esc(current.location)}</div>
+            `;
+
+            const tech = c.skills.technical.map((s) => `<span class="chip">${esc(s)}</span>`);
+            const soft = c.skills.soft.map((s) => `<span class="chip soft">${esc(s)}</span>`);
+            document.getElementById('skills').innerHTML = tech.concat(soft).join('');
+
+            document.getElementById('education').innerHTML = c.education.map((edu) => `
+                <li>
+                    <div class="edu-degree">${esc(edu.degree)}</div>
+                    <div class="edu-meta">${esc(edu.institution)} · ${esc(edu.duration)}</div>
+                </li>
+            `).join('');
+
+            const contact = [
+                `<li><a href="mailto:${esc(p.email)}">${icon('mail')}${esc(p.email)}</a></li>`,
+                `<li><a href="tel:${esc(p.phone.replace(/\s+/g, ''))}">${icon('phone')}${esc(p.phone)}</a></li>`,
+                `<li><span>${icon('pin')}${esc(p.location)}</span></li>`
+            ];
+            if (p.linkedin) {
+                contact.push(`<li><a href="${esc(p.linkedin)}" target="_blank" rel="noopener">${icon('linkedin')}LinkedIn</a></li>`);
+            }
+            document.getElementById('contact').innerHTML = contact.join('');
+
+            document.getElementById('experience-list').innerHTML = c.experience.map((job) => `
+                <article class="tile job">
+                    <div>
+                        <div class="job-date">${esc(job.duration)}</div>
+                        <div class="job-company">${esc(job.company)}</div>
+                        <div class="job-loc">${esc(job.location)}</div>
+                    </div>
+                    <div>
+                        <h3 class="job-role">${esc(job.position)}</h3>
+                        ${renderBullets(job.achievements)}
+                    </div>
+                </article>
+            `).join('');
+
+            document.getElementById('footer').textContent = `© ${new Date().getFullYear()} ${p.name}`;
+        }
+
+        render();
+    </script>
+</body>
+</html>
