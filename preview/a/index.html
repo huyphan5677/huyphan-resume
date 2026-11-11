@@ -184,8 +184,8 @@
             margin-bottom: 28px;
         }
 
-        /* Keep the timeline line aligned with the left edge of the hero text */
-        .timeline { padding-left: 4px; }
+        /* Indent section content a little from its label (between the old side column and flush-left) */
+        .section > :not(.section-label) { margin-left: 48px; }
 
         /* ---------- Experience timeline ---------- */
         .timeline { position: relative; }
@@ -320,6 +320,7 @@
             .hero { padding: 56px 0 48px; }
             .section { padding: 40px 0; }
             .section-label { margin-bottom: 20px; }
+            .section > :not(.section-label) { margin-left: 0; }
             .job { padding-left: 20px; }
         }
 
