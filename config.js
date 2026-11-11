@@ -107,7 +107,7 @@ const portfolioConfig = {
       location: "Ho Chi Minh City, Vietnam",
       achievements: [
         "Built demand and price forecasting models for fertilizer products globally and domestically, achieving MAPE < 1%",
-        "Built end-to-end ML pipelines in Alteryx — from data processing to AutoML with Champion-Challenger model selection — for sales forecasting (DFS Group)",
+        "Built end-to-end ML pipelines in Alteryx for DFS Group's sales forecasting, from data processing to AutoML with Champion-Challenger model selection",
         "Solved Market Basket Analysis and Store Clustering challenges for retail clients",
         "Collaborated with BI Developers to build dashboards and data storytelling from ML outputs",
         "Teaching assistant and curriculum designer for specialized consultant training courses"
