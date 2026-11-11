@@ -7,7 +7,8 @@
         { id: 'c', name: 'Bento Dark' },
         { id: 'd', name: 'Notebook' },
         { id: 'e', name: 'Editorial' },
-        { id: 'f', name: 'Split Sticky' }
+        { id: 'f', name: 'Split Sticky' },
+        { id: 'g', name: 'Slate Mix' }
     ];
 
     const ICONS = {
